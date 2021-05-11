@@ -1,0 +1,6 @@
+{
+    "name": "davidwebca/wp-polylang-translate-rewrite-slugs",
+    "description": "Polylang - Translate URL Rewrite Slugs",
+    "homepage": "https://github.com/davidwebca/wp-polylang-translate-rewrite-slugs",
+    "type": "wordpress-plugin"
+}
