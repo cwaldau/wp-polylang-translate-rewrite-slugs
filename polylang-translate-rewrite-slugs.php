@@ -1,18 +1,18 @@
 <?php
 /*
 Plugin Name: Polylang - Translate URL Rewrite Slugs
-Plugin URI: https://github.com/KLicheR/wp-polylang-translate-rewrite-slugs
+Plugin URI: https://github.com/davidwebca/wp-polylang-translate-rewrite-slugs
 Description: Help translate post types rewrite slugs.
-Version: 0.3.7
-Author: KLicheR
-Author URI: https://github.com/KLicheR
+Version: 0.3.8
+Author: davidwebca
+Author URI: https://github.com/davidwebca
 License: GPLv2 or later
 */
 
 /*  Copyright 2014  Kristoffer Laurin-Racicot  (email : kristoffer.lr@gmail.com)
 
 	This program is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License, version 2, as 
+	it under the terms of the GNU General Public License, version 2, as
 	published by the Free Software Foundation.
 
 	This program is distributed in the hope that it will be useful,
@@ -178,7 +178,7 @@ class Polylang_Translate_Rewrite_Slugs {
 		global $polylang;
 
 		// We always check for the post language. Otherwise, the current language.
-		$post_language = $polylang->model->get_post_language($post->ID);
+		$post_language = PLL()->model->post->get_language($post->ID);
 		if ($post_language) {
 			$lang = $post_language->slug;
 		} else {
@@ -188,10 +188,10 @@ class Polylang_Translate_Rewrite_Slugs {
 		// Check if the post type is handle.
 		if (isset($this->post_types[$post->post_type])) {
 			// Build URL. Lang prefix is already handle.
-			return home_url('/'.$this->post_types[$post->post_type]->translated_slugs[$lang]->rewrite['slug'].'/'.($leavename?"%$post->post_type%":get_page_uri( $post->ID )));
+			return trim(home_url( '/' . $this->post_types[$post->post_type]->translated_slugs[$lang]->rewrite['slug'] . '/' . ($leavename ? "%$post->post_type%" : get_page_uri( $post->ID ) ) ), '/').'/';
 		}
 
-		return $post_link;
+		return trim($post_link, '/').'/';
 	}
 
 	/**
@@ -279,7 +279,7 @@ class Polylang_Translate_Rewrite_Slugs {
 				return $term;
 
 			// Get the term language.
-			$term_language = $polylang->model->get_term_language($term->term_id);
+			$term_language = PLL()->model->term->get_language($term->term_id);
 			if ($term_language) {
 				$lang = $term_language->slug;
 			} else {
