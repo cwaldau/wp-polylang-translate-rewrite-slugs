@@ -205,6 +205,10 @@ class Polylang_Translate_Rewrite_Slugs {
 			$lang = pll_current_language();
 		}
 
+		if(!$lang) {
+			$lang = pll_default_language();
+		}
+
 		// Check if the post type is handle.
 		if (isset($this->post_types[$archive_post_type])) {
 			return $this->get_post_type_archive_link($archive_post_type, $lang);
