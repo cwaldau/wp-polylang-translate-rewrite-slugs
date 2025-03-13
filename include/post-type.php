@@ -148,7 +148,7 @@ class PLL_TRS_Post_Type {
 				if ($polylang->options['hide_default'] && $lang == pll_default_language()) {
 					add_permastruct( $post_type.'_'.$lang, "{$args->rewrite['slug']}/%$post_type%", $permastruct_args );
 				} else {
-					add_permastruct( $post_type.'_'.$lang, "%language%/{$args->rewrite['slug']}/%$post_type%", $permastruct_args );
+					add_permastruct( $post_type.'_'.$lang, "$lang/{$args->rewrite['slug']}/%$post_type%", $permastruct_args );
 				}
 			}
 		}
