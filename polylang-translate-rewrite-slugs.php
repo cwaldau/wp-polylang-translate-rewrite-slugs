@@ -1,12 +1,14 @@
 <?php
 /*
 Plugin Name: Polylang - Translate URL Rewrite Slugs
-Plugin URI: https://github.com/davidwebca/wp-polylang-translate-rewrite-slugs
+Plugin URI: https://github.com/cwaldau/wp-polylang-translate-rewrite-slugs
 Description: Help translate post types rewrite slugs.
-Version: 0.3.8
-Author: davidwebca
-Author URI: https://github.com/davidwebca
+Version: 0.3.9
+Author: cwaldau
+Author URI: https://github.com/cwaldau
 License: GPLv2 or later
+Original Author URI: https://github.com/KLicheR/wp-polylang-translate-rewrite-slugs
+Forked From URI: https://github.com/davidwebca/wp-polylang-translate-rewrite-slugs
 */
 
 /*  Copyright 2014  Kristoffer Laurin-Racicot  (email : kristoffer.lr@gmail.com)
