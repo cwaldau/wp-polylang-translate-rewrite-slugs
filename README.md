@@ -2,11 +2,9 @@ Polylang - Translate URL Rewrite Slugs
 ===============================================================================
 WordPress plugin that add rewrite url slugs translation feature to Polylang.
 
-This fork fixes an issue seemingly related to having 3 or more languages, which is itself perhaps a red herring but regardless seems to fix my specific issue
-Forked from v0.3.8 by https://github.com/davidwebca/wp-polylang-translate-rewrite-slugs (introduces fixes for PLL updates)
-Original forked from https://github.com/KLicheR/wp-polylang-translate-rewrite-slugs
-
-Work in progress ;)
+- This fork fixes an issue seemingly related to having 3 or more languages, which is itself perhaps a red herring but regardless seems to fix my specific issue
+- Forked from v0.3.8 by https://github.com/davidwebca/wp-polylang-translate-rewrite-slugs (introduces fixes for PLL updates)
+- Original forked from https://github.com/KLicheR/wp-polylang-translate-rewrite-slugs
 
 Upgrade notice < 0.3.0
 -------------------------------------------------------------------------------
